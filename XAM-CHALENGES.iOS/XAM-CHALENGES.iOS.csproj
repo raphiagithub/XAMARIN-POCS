@@ -147,13 +147,15 @@
     <Reference Include="Xamarin.iOS" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="3.0.0.482510" />
+    <PackageReference Include="Xamarin.Forms">
+      <Version>3.1.0.637273</Version>
+    </PackageReference>
   </ItemGroup>
-  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
-    <ProjectReference Include="..\XAM_CHALENGES\XAM_CHALENGES.csproj">
-      <Project>{56786CC6-BDB5-4A2B-8556-EF4693B44771}</Project>
-      <Name>XAM_CHALENGES</Name>
+    <ProjectReference Include="..\XAM-CHALENGES\XAM-CHALENGES.csproj">
+      <Project>{DFD79635-826D-48A1-B42C-58DC9CAFDAB4}</Project>
+      <Name>XAM-CHALENGES</Name>
     </ProjectReference>
   </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

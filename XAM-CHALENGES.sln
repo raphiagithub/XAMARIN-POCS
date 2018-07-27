@@ -7,6 +7,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XAM-CHALENGES.iOS", "XAM-CH
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XAM-CHALENGES", "XAM-CHALENGES\XAM-CHALENGES.csproj", "{DFD79635-826D-48A1-B42C-58DC9CAFDAB4}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8ADF0E6B-8D01-411F-A785-A1BFF4145E34}"
+	ProjectSection(SolutionItems) = preProject
+		XAM-CHALENGES.sln = XAM-CHALENGES.sln
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
