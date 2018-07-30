@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+   xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+   xmlns:local="clr-namespace:XAMCHALENGES.CustomClasses;assembly=XAM-CHALENGES"
+   x:Class="XAMCHALENGES.Views.GallaryView">
+   <ContentPage.Content>
+<!--<ListView x:Name="listView"
+          ItemsSource="{Binding Source}"
+          FlowDirection="LeftToRight"
+          SeparatorVisibility="None"
+          >
+    <ListView.ItemTemplate> 
+        <DataTemplate>
+            <ViewCell>-->
+        <Grid>
+            <Grid.ColumnDefinitions>
+                
+            </Grid.ColumnDefinitions>
+
+            <AbsoluteLayout BackgroundColor="Gray" Grid.Row="0" Grid.Column="0">
+                        <local:CustomImage Source="video.png"
+                               AbsoluteLayout.LayoutBounds="0,0,1,1"
+                               AbsoluteLayout.LayoutFlags="All"
+                                
+                              
+                               />    
+                        <local:CustomImage Source="tick.ico" ClassId="1"
+                               AbsoluteLayout.LayoutBounds="1,0,.2,.2"
+                               AbsoluteLayout.LayoutFlags="All"  >
+                               <local:CustomImage.GestureRecognizers>
+                                     <TapGestureRecognizer
+                                        Tapped="Handle_Tapped"
+                                        NumberOfTapsRequired="1" />
+                                </local:CustomImage.GestureRecognizers>
+                                </local:CustomImage>
+        </AbsoluteLayout>
+             <AbsoluteLayout BackgroundColor="Gray" Grid.Row="0" Grid.Column="1">
+                        <local:CustomImage Source="video.png"
+                               AbsoluteLayout.LayoutBounds="0,0,1,1"
+                               AbsoluteLayout.LayoutFlags="All"
+                               
+                               />    
+                        <local:CustomImage Source="tick.ico"
+                               AbsoluteLayout.LayoutBounds="1,0,.2,.2"
+                               AbsoluteLayout.LayoutFlags="All"  >
+                               <local:CustomImage.GestureRecognizers>
+                                     <TapGestureRecognizer
+                                        Tapped="Handle_Tapped"
+                                        NumberOfTapsRequired="1" />
+                                </local:CustomImage.GestureRecognizers>
+                                </local:CustomImage>
+        </AbsoluteLayout>
+            <AbsoluteLayout BackgroundColor="Gray" Grid.Row="1" Grid.Column="0">
+                        <local:CustomImage Source="video.png"
+                               AbsoluteLayout.LayoutBounds="0,0,1,1"
+                               AbsoluteLayout.LayoutFlags="All"
+                                
+                              
+                               />    
+                        <local:CustomImage Source="tick.ico"
+                               AbsoluteLayout.LayoutBounds="1,0,.2,.2"
+                               AbsoluteLayout.LayoutFlags="All"  >
+                               <local:CustomImage.GestureRecognizers>
+                                     <TapGestureRecognizer
+                                        Tapped="Handle_Tapped"
+                                        NumberOfTapsRequired="1" />
+                                </local:CustomImage.GestureRecognizers>
+                                </local:CustomImage>
+        </AbsoluteLayout>
+             <AbsoluteLayout BackgroundColor="Gray" Grid.Row="1" Grid.Column="1">
+                        <local:CustomImage Source="video.png"
+                               AbsoluteLayout.LayoutBounds="0,0,1,1"
+                               AbsoluteLayout.LayoutFlags="All"
+                               
+                               />    
+                        <local:CustomImage Source="tick.ico"
+                               AbsoluteLayout.LayoutBounds="1,0,.2,.2"
+                               AbsoluteLayout.LayoutFlags="All"  >
+                                
+                                </local:CustomImage>
+        </AbsoluteLayout>
+        </Grid>
+              
+          <!--  </ViewCell>
+        </DataTemplate>
+    </ListView.ItemTemplate>
+</ListView>-->
+   </ContentPage.Content>
+</ContentPage>

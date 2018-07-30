@@ -157,5 +157,10 @@
       <Name>XAM-CHALENGES</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\tick.ico" />
+    <BundleResource Include="Resources\video.png" />
+    <BundleResource Include="Resources\uncheck.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

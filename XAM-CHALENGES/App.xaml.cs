@@ -1,6 +1,7 @@
 using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using XAMCHALENGES.Views;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace XAM_CHALENGES
@@ -11,7 +12,7 @@ namespace XAM_CHALENGES
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new GallaryView();
         }
 
         protected override void OnStart()
