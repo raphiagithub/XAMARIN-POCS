@@ -11,5 +11,9 @@
     <Folder Include="Pages\" />
     <Folder Include="Views\" />
     <Folder Include="CustomClasses\" />
+    <Folder Include="Control\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Pages\TestPage.cs" />
   </ItemGroup>
 </Project>

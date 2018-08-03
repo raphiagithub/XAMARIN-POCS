@@ -61,6 +61,7 @@
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Renderers\CardRenderer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -87,6 +88,8 @@
     <AndroidResource Include="Resources\drawable\video.png" />
     <AndroidResource Include="Resources\drawable\tick.ico" />
     <AndroidResource Include="Resources\drawable\uncheck.png" />
+    <AndroidResource Include="Resources\drawable\user.jpeg" />
+    <AndroidResource Include="Resources\drawable\video2.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />
@@ -94,6 +97,7 @@
     <Folder Include="Resources\drawable-xhdpi\" />
     <Folder Include="Resources\drawable-xxhdpi\" />
     <Folder Include="Resources\drawable-xxxhdpi\" />
+    <Folder Include="Renderers\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\XAM-CHALENGES\XAM-CHALENGES.csproj">

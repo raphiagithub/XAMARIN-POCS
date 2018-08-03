@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:XAMCHALENGES.Control;assembly=XAM-CHALENGES"
+             x:Class="XAMCHALENGES.Pages.TestPage">
+    <ContentPage.Content>
+      <RelativeLayout >
+            <StackLayout BackgroundColor="#6200EE" x:Name="stkUp"  
+                         RelativeLayout.XConstraint="{ConstraintExpression
+                Type=RelativeToParent,Property=Height,Factor=.0 }" 
+                          RelativeLayout.YConstraint="{ConstraintExpression
+                Type=RelativeToParent,Property=Width,Factor=.0 }" 
+                         RelativeLayout.WidthConstraint="{ConstraintExpression
+                         Type=RelativeToParent,Property=Width,Factor=1,Constant=0}"
+                         RelativeLayout.HeightConstraint="{ConstraintExpression
+                         Type=RelativeToParent,Property=Height,Factor=.5,Constant=0}"
+                 >
+                </StackLayout>
+                  <StackLayout BackgroundColor="#ebebeb" x:Name="stkDown"  
+                             RelativeLayout.XConstraint="{ConstraintExpression
+                    Type=RelativeToParent,Property=Width,Factor=.0 }" 
+                              RelativeLayout.YConstraint="{ConstraintExpression
+                    Type=RelativeToParent,Property=Height,Factor=.5 }" 
+                             RelativeLayout.WidthConstraint="{ConstraintExpression
+                             Type=RelativeToParent,Property=Width,Factor=1,Constant=0}"
+                             RelativeLayout.HeightConstraint="{ConstraintExpression
+                             Type=RelativeToParent,Property=Height,Factor=.5,Constant=0}"
+                     >
+                 
+
+
+                    
+                    </StackLayout>
+
+            <StackLayout x:Name="stk" 
+            BackgroundColor="Blue"
+                 RelativeLayout.XConstraint="{ConstraintExpression
+                Type=RelativeToParent,Property=Width,Factor=.1 }" 
+                 RelativeLayout.YConstraint="{ConstraintExpression
+                Type=RelativeToParent,Property=Height,Factor=.4 }" 
+                   RelativeLayout.WidthConstraint="{ConstraintExpression
+                         Type=RelativeToParent,Property=Width,Factor=.8,Constant=0}"
+                 RelativeLayout.HeightConstraint="{ConstraintExpression
+                         Type=RelativeToParent,Property=Height,Factor=.5,Constant=0}"
+                >
+                <RelativeLayout  BackgroundColor="#FFFFFF" >
+                    <StackLayout BackgroundColor="#FFFFFF"
+                    RelativeLayout.XConstraint="{ConstraintExpression
+                Type=RelativeToParent,Property=Width,Factor=0}" 
+                 RelativeLayout.YConstraint="{ConstraintExpression
+                Type=RelativeToParent,Property=Height,Factor=.2 }" 
+                                 RelativeLayout.WidthConstraint="{ConstraintExpression
+                         Type=RelativeToParent,Property=Width,Factor=1,Constant=0}"
+                                  RelativeLayout.HeightConstraint="{ConstraintExpression
+                         Type=RelativeToParent,Property=Height,Factor=.5,Constant=0}"
+                        >
+                        
+                       <Entry Text="Password"   VerticalOptions="CenterAndExpand" />
+                      <Button Text="Login" BackgroundColor="Green"   VerticalOptions="CenterAndExpand"/> 
+                    </StackLayout>
+                    
+                </RelativeLayout>
+                
+                       
+                    
+
+            </StackLayout>
+
+               <StackLayout  
+                RelativeLayout.XConstraint="{ConstraintExpression  ElementName=stk,
+                            Type=RelativeToView, Property=Width,Factor=.5 }" 
+                 RelativeLayout.YConstraint="{ConstraintExpression ElementName=stk,
+                Type=RelativeToParent,Property=Height,Factor=.3 }" 
+                   RelativeLayout.WidthConstraint="{ConstraintExpression ElementName=stk,
+                Type=RelativeToView,Property=Width,Factor=.3,Constant=0}"
+                 RelativeLayout.HeightConstraint="{ConstraintExpression ElementName=stk,
+                Type=RelativeToView,Property=Height,Factor=.4,Constant=0}"
+                    >
+                    <Image Source="user.png"  />
+              
+                    
+                </StackLayout>
+
+              <Frame BackgroundColor="#ffffff"
+                RelativeLayout.XConstraint="{ConstraintExpression  ElementName=stk,
+                            Type=RelativeToParent, Property=Width,Factor=.15,Constant=0 }" 
+                 RelativeLayout.YConstraint="{ConstraintExpression ElementName=stk,
+                Type=RelativeToParent,Property=Height,Factor=.82 }" 
+                   RelativeLayout.WidthConstraint="{ConstraintExpression ElementName=stk,
+                Type=RelativeToView,Property=Width,Factor=.89,Constant=0}"
+                 RelativeLayout.HeightConstraint="{ConstraintExpression ElementName=stk,
+                Type=RelativeToView,Property=Height,Factor=.3,Constant=0}"
+                       HasShadow="false" BorderColor="Blue" 
+                    >
+                   <!--  <Frame.BackgroundColor>
+            <Color x:FactoryMethod="FromRgba">
+                <x:Arguments>
+                    <x:Int32>220</x:Int32>
+                    <x:Int32>20</x:Int32>
+                    <x:Int32>10</x:Int32>
+                    <x:Int32>150</x:Int32>
+                </x:Arguments>
+            </Color>
+        </Frame.BackgroundColor>-->
+                <Label Text="hi gabriel" />
+                </Frame>
+    <!--<BoxView Color="Red" x:Name="redBox"
+        RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
+            Property=Height,Factor=.0,Constant=0}"
+        RelativeLayout.WidthConstraint="{ConstraintExpression
+            Type=RelativeToParent,Property=Width,Factor=1,Constant=0}"
+        RelativeLayout.HeightConstraint="{ConstraintExpression
+            Type=RelativeToParent,Property=Height,Factor=.8,Constant=0}" />
+    <BoxView Color="Blue"
+        RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView,
+            ElementName=redBox,Property=Y,Factor=1,Constant=20}"
+        RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToView,
+            ElementName=redBox,Property=X,Factor=1,Constant=20}"
+        RelativeLayout.WidthConstraint="{ConstraintExpression
+            Type=RelativeToParent,Property=Width,Factor=.5,Constant=0}"
+        RelativeLayout.HeightConstraint="{ConstraintExpression
+            Type=RelativeToParent,Property=Height,Factor=.5,Constant=0}" />-->
+</RelativeLayout>
+    </ContentPage.Content>
+</ContentPage>

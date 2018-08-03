@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XAMCHALENGES.Pages.PopupTest">
+    <ContentPage.Content>
+
+        <AbsoluteLayout x:Name="mainlayout">
+
+          <!--  <ContentView  BackgroundColor="#C0808080" AbsoluteLayout.LayoutBounds="0, 0, 1, 1" AbsoluteLayout.LayoutFlags="All">
+            
+                 <StackLayout VerticalOptions="Center" 
+                              HorizontalOptions="Center"
+                              BackgroundColor="White" Spacing="20" Padding="20">
+                    
+                 <Label Text="Hi gabriel" />
+                 <Label Text="Hi gabriel" />
+                 <Label Text="Hi gabriel" />
+                    </StackLayout>
+          
+            </ContentView>-->
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>

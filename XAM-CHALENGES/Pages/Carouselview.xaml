@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:local="clr-namespace:XAMCHALENGES.Control;assembly=XAM-CHALENGES"
+             x:Class="XAMCHALENGES.Pages.Carouselview">
+    <ContentView.Content>
+
+        
+      
+        <Grid Margin="20">
+
+            <Grid.RowDefinitions >
+                <RowDefinition Height="300" />
+                <RowDefinition Height="300" />
+            </Grid.RowDefinitions>
+             <RelativeLayout  Grid.Row="0" Grid.Column="0" Margin="15" >
+                        <Image Source="video" Aspect="AspectFill" x:Name="imgThumbnail" BackgroundColor="Yellow" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" 
+                        RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width,Factor=0}"
+                        RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,Property=Height,Factor=0}"
+                        RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width,Factor=1}"
+                        RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,Property=Height,Factor=1}"
+                               />
+                        <local:CustomImage Source="uncheck"  Aspect="AspectFill" 
+                        RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToView,ElementName=imgThumbnail,Property=Width,Factor=.8}"
+                        RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView,ElementName=imgThumbnail,Property=Height,Factor=0}"
+                               HeightRequest="80" 
+                               >
+                    <Image.GestureRecognizers>
+                         <TapGestureRecognizer
+                                    Tapped="OnTapGestureRecognizerTapped"
+                                    NumberOfTapsRequired="1" />
+                    </Image.GestureRecognizers>
+                    </local:CustomImage>
+                </RelativeLayout> 
+              <RelativeLayout  Grid.Row="0" Grid.Column="1" Margin="15"  >
+                        <Image Source="video" Aspect="AspectFill" x:Name="imgThumbnail1" BackgroundColor="Yellow" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" 
+                        RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width,Factor=0}"
+                        RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,Property=Height,Factor=0}"
+                        RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width,Factor=1}"
+                        RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,Property=Height,Factor=1}"
+                               />
+                        <Image Source="uncheck"  Aspect="AspectFit" 
+                        RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToView,ElementName=imgThumbnail1,Property=Width,Factor=.8}"
+                        RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView,ElementName=imgThumbnail1,Property=Height,Factor=0}"
+                                HeightRequest="80" 
+                                >
+                    <Image.GestureRecognizers>
+                         <TapGestureRecognizer
+                                    Tapped="OnTapGestureRecognizerTapped"
+                                    NumberOfTapsRequired="1" />
+                    </Image.GestureRecognizers>
+                    </Image>
+                </RelativeLayout> 
+             <RelativeLayout  Grid.Row="0" Grid.Column="2" Margin="15"  >
+                        <Image Source="video" Aspect="AspectFill" x:Name="imgThumbnail2" BackgroundColor="Yellow" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" 
+                        RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width,Factor=0}"
+                        RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,Property=Height,Factor=0}"
+                        RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width,Factor=1}"
+                        RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,Property=Height,Factor=1}"
+                               />
+                        <Image Source="uncheck"  Aspect="AspectFit" 
+                        RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToView,ElementName=imgThumbnail2,Property=Width,Factor=.8}"
+                        RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView,ElementName=imgThumbnail2,Property=Height,Factor=0}"
+                                HeightRequest="80" 
+                                >
+                    <Image.GestureRecognizers>
+                         <TapGestureRecognizer
+                                    Tapped="OnTapGestureRecognizerTapped"
+                                    NumberOfTapsRequired="1" />
+                    </Image.GestureRecognizers>
+                    </Image>
+                </RelativeLayout> 
+
+              <RelativeLayout  Grid.Row="1" Grid.Column="0" Margin="15"  >
+                        <Image Source="video" Aspect="AspectFill" x:Name="imgThumbnail3" BackgroundColor="Yellow" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" 
+                        RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width,Factor=0}"
+                        RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,Property=Height,Factor=0}"
+                        RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width,Factor=1}"
+                        RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,Property=Height,Factor=1}"
+                               />
+                        <Image Source="uncheck"  Aspect="AspectFit" 
+                        RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToView,ElementName=imgThumbnail3,Property=Width,Factor=.8}"
+                        RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView,ElementName=imgThumbnail3,Property=Height,Factor=0}"
+                                HeightRequest="80" 
+                                >
+                    <Image.GestureRecognizers>
+                         <TapGestureRecognizer
+                                    Tapped="OnTapGestureRecognizerTapped"
+                                    NumberOfTapsRequired="1" />
+                    </Image.GestureRecognizers>
+                    </Image>
+                </RelativeLayout> 
+                 </Grid>
+
+         
+                      
+    </ContentView.Content>
+</ContentView>

@@ -1,6 +1,7 @@
 using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using XAMCHALENGES.Pages;
 using XAMCHALENGES.Views;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
@@ -12,7 +13,7 @@ namespace XAM_CHALENGES
         {
             InitializeComponent();
 
-            MainPage = new GallaryView();
+            MainPage = new CarouselViewPage();
         }
 
         protected override void OnStart()
