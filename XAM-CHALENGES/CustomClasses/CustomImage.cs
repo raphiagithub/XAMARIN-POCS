@@ -9,7 +9,7 @@ namespace XAMCHALENGES.CustomClasses
         {
             get;
             set;
-        } = "uncheck";
+        }
         public CustomImage()
         {
             this.Source = "uncheck.png";

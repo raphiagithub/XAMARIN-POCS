@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 
 using Xamarin.Forms;
+using XAMCHALENGES.Control.Carousel;
 
 namespace XAMCHALENGES.Pages
 {
@@ -26,10 +27,7 @@ namespace XAMCHALENGES.Pages
             {
                 FilePath = "https://i.kym-cdn.com/photos/images/original/001/149/102/6f3.png"
             });
-            model.Add(new CarouselModal()
-            {
-                FilePath = "https://i.ytimg.com/vi/5GmvUZlKWGM/maxresdefault.jpg"
-            }); 
+          
             model.Add(new CarouselModal()
             {
                 FilePath = "http://www.wallpapers13.com/wp-content/uploads/2016/11/Tom-And-Jerry-Go-Back-in-Time-HD-Wallpaper-1920x1200-915x515.jpg"

@@ -12,6 +12,7 @@
     <Folder Include="Views\" />
     <Folder Include="CustomClasses\" />
     <Folder Include="Control\" />
+    <Folder Include="Control\Carousel\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="Pages\TestPage.cs" />
