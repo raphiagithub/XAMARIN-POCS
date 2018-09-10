@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:custom="clr-namespace:XAMCHALENGES.Views;assembly=XAM-CHALENGES"
+             x:Class="XAMCHALENGES.Pages.AudioPlayerPage">
+   <ContentPage.Content>
+        <StackLayout>
+             <custom:Textbox   TextColor="Red"  Text="Hi gabriel"  PlaceHolder="assdfds"   />
+                <custom:Textbox Icon="user"  TextColor="Red" TextAlign="End"   PlaceHolder="assdfds"   />
+                <custom:Textbox   TextColor="Red"  TextBoxHeight="40"   PlaceHolder="assdfds"   />
+        
+        <AbsoluteLayout BackgroundColor="Gray" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <StackLayout BackgroundColor="White" 
+                         AbsoluteLayout.LayoutBounds="0,0,1,.1"
+                         AbsoluteLayout.LayoutFlags="All">
+                <Label  Text="This is file name" HorizontalOptions="Center"  VerticalOptions="CenterAndExpand"   />
+            </StackLayout>
+
+            <StackLayout BackgroundColor="Purple"
+                         AbsoluteLayout.LayoutFlags="All"
+                         AbsoluteLayout.LayoutBounds="0,.5,1,.8">
+                <Label Text="here image"  />
+                
+            </StackLayout>
+
+            <StackLayout BackgroundColor="Blue" VerticalOptions="End" Padding="50"
+                         AbsoluteLayout.LayoutFlags="All"
+                         AbsoluteLayout.LayoutBounds="0,1,1,.3">
+                <Button Text="Play" BackgroundColor="Green"  x:Name="btnPlays" Clicked="OnStartClicked" BorderRadius="10" TextColor="White"/>
+               
+                
+               
+             <Entry />
+            </StackLayout>
+        </AbsoluteLayout>
+            </StackLayout>
+    </ContentPage.Content> 
+</ContentPage>

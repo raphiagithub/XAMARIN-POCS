@@ -6,6 +6,8 @@ using Xamarin.Forms;
 namespace XAMCHALENGES.Control.Carousel
 {
 
+    #region Carousel View
+
     /// <summary>
     /// This is the main view for Carousel control
     /// </summary>
@@ -94,7 +96,8 @@ namespace XAMCHALENGES.Control.Carousel
             {
                 NumberOfTapsRequired = 1
             };
-            recognizer.Tapped += (sender, e) => {
+            recognizer.Tapped += (sender, e) =>
+            {
                 if (CurrentState.Equals(CarouselState.Edit))
                     CurrentState = CarouselState.View;
                 else
@@ -110,31 +113,33 @@ namespace XAMCHALENGES.Control.Carousel
 
             Grid grdMain = new Grid()
             {
-                Margin = 20
+               // Margin = 20,RowSpacing=5
+               // HeightRequest=100
             };
+            int index = 0;
             for (int i = 0; i < Source.Count; i++)
             {
                 int originalivalue = i;
                 ItemPerRow = ItemPerRow >= Source.Count ? Source.Count : ItemPerRow;
                 for (int j = 0; j < ItemPerRow; j++)
                 {
-                    if (Source.Count > i)
+                    if (Source.Count > index)
                     {
-                        grdMain.RowDefinitions.Add(new RowDefinition()
-                        {
-                            Height = 100
-                        });
+                            grdMain.RowDefinitions.Add(new RowDefinition()
+                            {
+                                Height = 50
+                              //  Height=new GridLength(1,GridUnitType.Auto)
+                            });
                         RelativeLayout rtlThumbnailContent = new RelativeLayout()
                         {
                             Margin = 0,
-                            VerticalOptions = HorizontalOptions = LayoutOptions.FillAndExpand,
-                            BackgroundColor = Color.Red
+                            VerticalOptions = HorizontalOptions = LayoutOptions.FillAndExpand
+                          
 
                         };
                         Image ThumbNail = new Image()
                         {
                             Source = Source[i].FilePath,
-                            BackgroundColor = Color.Blue,
                             Aspect = Aspect.AspectFit,
                             ClassId = Source[i].Id
                         };
@@ -142,10 +147,10 @@ namespace XAMCHALENGES.Control.Carousel
 
                         rtlThumbnailContent.Children.Add(ThumbNail, Constraint.RelativeToParent((parent) =>
                         {
-                            return parent.X;
+                            return parent.X*0;
                         }), Constraint.RelativeToParent((parent) =>
                         {
-                            return parent.Y;
+                            return parent.Y*0;
                         }), Constraint.RelativeToParent((parent) =>
                         {
                             return parent.Width;
@@ -158,21 +163,24 @@ namespace XAMCHALENGES.Control.Carousel
                         {
                             ID = System.IO.Path.GetFileName(Source[i].FilePath),
                             IsVisible = CurrentState.Equals(CarouselState.Edit)
+                            //WidthRequest= HeightRequest=10
                         };
 
                         rtlThumbnailContent.Children.Add(imgSelect, Constraint.RelativeToView(ThumbNail, (parent, view) =>
                         {
-                            return view.Width * .35;
+                            return view.Width * .8;
                         }), Constraint.RelativeToView(ThumbNail, (parent, view) =>
                         {
-                            return view.Height * .35;
-                        }), Constraint.RelativeToView(ThumbNail, (parent, view) =>
-                        {
-                            return view.Height * .4;
-                        }), Constraint.RelativeToView(ThumbNail, (parent, view) =>
-                        {
-                            return view.Height * .4;
-                        }));
+                            return view.Height * .0;
+                        })
+                        //                                 , Constraint.RelativeToView(ThumbNail, (parent, view) =>
+                        //{
+                        //    return view.Height * .4;
+                        //}), Constraint.RelativeToView(ThumbNail, (parent, view) =>
+                        //{
+                        //    return view.Height * .4;
+                        //})
+                                                        );
                         var sdf = new StackLayout();
                         sdf.Children.Add(rtlThumbnailContent);
 
@@ -200,7 +208,7 @@ namespace XAMCHALENGES.Control.Carousel
                         ThumbNail.GestureRecognizers.Add(imgThumbNailtap);
 
                         i++;
-                        grdMain.Children.Add(sdf, j, originalivalue);
+                        grdMain.Children.Add(rtlThumbnailContent, j, originalivalue);
                     }
                 }
             }
@@ -270,51 +278,50 @@ namespace XAMCHALENGES.Control.Carousel
     }
 
 
+    #endregion
+
+    #region Media view page
+
+    /// <summary>
+    /// This is the page to show medias based on the attachment type
+    /// </summary>
     public class MediaPlayerPage : ContentPage
     {
-        public string FileUrl
-        {
-            get;
-            set;
-        }
+      
+        
         public MediaPlayerPage(CarouselModal carouselModal)
         {
-            StackLayout layout = new StackLayout();
-            layout.Children.Add(new Label()
+            
+            string flag = "image";
+            switch (flag)
             {
-                Text = carouselModal.Id
-            });
-            Button btn = new Button();
-            btn.Text = "Click to close";
-            btn.Clicked += (sender, e) => {
+                case "image":
+                    {
+                        this.Content = new PictureView(carouselModal);
+                    };
+                    break;
 
-                Navigation.PopModalAsync();
-            };
-            layout.Children.Add(btn);
-            FileUrl = carouselModal.FilePath;
-            //this.Content = layout;
-            ShowMedia();
+                default:
+                    break;
+            }
         }
+    }
 
-        void ShowMedia()
+
+    /// <summary>
+    /// This holds functionalities about image view
+    /// </summary>
+    public class PictureView:ContentView
+    {
+        public PictureView(CarouselModal carouselModal)
         {
-            //For image
-            /*
- <StackLayout BackgroundColor="Blue">
-        <Image Source="user" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
-        <StackLayout BackgroundColor="#80000000">
-            <Button Text="Click to close" />
-            <Label Text="Hi gabriel" />
-        </StackLayout>
-    </StackLayout>
-            */
-
+             
             StackLayout stkContent = new StackLayout();
             Image img = new Image()
             {
                 VerticalOptions = LayoutOptions.CenterAndExpand,
                 HorizontalOptions = LayoutOptions.Center,
-                Source = FileUrl
+                Source =carouselModal.FilePath
             };
 
             StackLayout stkControls = new StackLayout()
@@ -325,16 +332,17 @@ namespace XAMCHALENGES.Control.Carousel
             {
                 Text = "Click to close"
             };
-            btnClose.Clicked += (sender, e) => {
+            btnClose.Clicked += (sender, e) =>
+            {
                 this.Navigation.PopModalAsync();
             };
             stkControls.Children.Add(btnClose);
             stkContent.Children.Add(img);
             stkContent.Children.Add(stkControls);
             this.Content = stkContent;
-
         }
     }
 
-}
+    #endregion
 
+}

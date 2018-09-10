@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="XAMCHALENGES.Views.TextboxView">
+    <ContentView.Content>
+        <StackLayout>
+            <Frame Padding="0" HasShadow="false"  BorderColor="#e8f0ff" CornerRadius="4">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto">
+                        </ColumnDefinition>
+                        <ColumnDefinition Width="1*">
+                        </ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <RelativeLayout Grid.Row="0" Grid.Column="0">
+                        <Image Source="user" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,Property=Height,Factor=.1}" RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,Property=Height,Factor=.1}" RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,Property=Height,Factor=.8}" RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,Property=Height,Factor=.8}" />
+                    </RelativeLayout>
+                    <Entry Text="This is simple entry" Grid.Row="0" Grid.Column="1" />
+                </Grid>
+            </Frame>
+        </StackLayout>
+    </ContentView.Content>
+</ContentView>

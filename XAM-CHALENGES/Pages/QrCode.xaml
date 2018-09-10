@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XAMCHALENGES.Pages.QrCode">
+    <ContentView.Content>
+         <!--<StackLayout VerticalOptions="Start" HorizontalOptions="Center">
+                <Frame BackgroundColor="White" Margin="20" Padding="20">
+                    <Grid x:Name="popupGrid">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition  Height="1000*"  />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <Label x:Name="lblTitle" FontAttributes="Bold" Grid.Row="0"   Text="Title"/>
+                    <StackLayout Grid.Column="1" Grid.Row="0" Orientation="Horizontal">
+                        <Button TextColor="Fuchsia"   Text="Cancel" BackgroundColor="Blue" HorizontalOptions="EndAndExpand" x:Name="btnCancel" />    
+                        <Button TextColor="Fuchsia" IsVisible="true"  Text="Clear" BackgroundColor="Black" HorizontalOptions="EndAndExpand" x:Name="btnClear" />    
+                    </StackLayout>
+                    </Grid>
+                </Frame>
+            </StackLayout>-->
+       <StackLayout>    
+            <Frame Padding="0"  HeightRequest="600"  >
+                
+                    <RelativeLayout>
+                    <Image RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,Property=Height,Factor=.1 }" Source="user"
+                           RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,Property=Height,Factor=.05 }" 
+                           RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,Property=Height,Factor=.9}" 
+                           RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,Property=Height,Factor=.905   }" 
+                           BackgroundColor="Silver" />
+                    <Label Text="this is sample fjkl jklsjfkldsjfkldsfjkldsjfklsdjfdklsjfdklsfjdlkjfkldsjfklsdfjklsdjfkldsfjkldsjfkldsjfkdsfj"
+                    RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,Property=Height,Factor=1 }"  
+                            RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,Property=Height,Factor=.5 }" 
+                           RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width,Factor=1}" 
+                           RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,Property=Height,Factor=.905   }" 
+                           />        
+                        </RelativeLayout>
+                   
+            </Frame>
+        </StackLayout>
+    </ContentView.Content>
+</ContentView>

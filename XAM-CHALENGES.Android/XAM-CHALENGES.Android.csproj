@@ -62,6 +62,7 @@
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Renderers\CardRenderer.cs" />
+    <Compile Include="Dependencies\AudioPlayer_Droid.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -98,6 +99,7 @@
     <Folder Include="Resources\drawable-xxhdpi\" />
     <Folder Include="Resources\drawable-xxxhdpi\" />
     <Folder Include="Renderers\" />
+    <Folder Include="Dependencies\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\XAM-CHALENGES\XAM-CHALENGES.csproj">
